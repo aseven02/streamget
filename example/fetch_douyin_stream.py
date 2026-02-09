@@ -6,6 +6,7 @@ from streamget import DouyinLiveStream
 async def main():
     # URL of the Douyin live stream
     url = "https://live.douyin.com/991562466558"
+    url = "https://live.douyin.com/598452759634"
 
     # Initialize the DouyinLiveStream object
     douyin_stream = DouyinLiveStream()
@@ -13,6 +14,7 @@ async def main():
     try:
         # Fetch the live stream data from the provided URL
         data = await douyin_stream.fetch_web_stream_data(url)
+        print(data)
 
         # Fetch the stream URL
         stream_data = await douyin_stream.fetch_stream_url(data, "OD")
